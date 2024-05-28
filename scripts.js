@@ -5,7 +5,7 @@ let currentSong = new Audio()
 let songs;
 async function getSongs() {
 
-    let song_list = await fetch("songs/")
+    let song_list = await fetch("/songs/")
     let response = await song_list.text()
     let div = document.createElement("div")
     div.innerHTML = response;
