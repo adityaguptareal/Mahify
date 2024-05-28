@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <title>Spotify - Web Player: Music for everyone'</title>
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left_container ">
+            
+            <img class="close invert" src="close.svg" alt="" srcset="">
+
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="home-content">
+
+                    <div class="logo"><img class="invert" src="logo.svg" alt=""></div>
+                    <ul>
+                        <li><img class="invert" src="home.svg" alt="home">Home</li>
+                        <li><img class="invert" src="search.svg" alt="search">Search</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="library bg-grey rounded m-1  p-1">
+                <div class="heading">
+                    <img class="invert" src="playlist.svg" alt="">
+                    <h2>Your library</h2>
+                </div>
+
+                <!-- Library Songs List -->
+                <div class="song-list">
+                    <ul>
+                        <!-- <li>1st Songs</li> -->
+                        <!-- <li>
+                            <img class="invert" src="music_note.svg" alt="">
+                            <div class="song-info">
+                                <div class="song-name">Song Name</div>
+                                <div class="Song-Artist">Song Artist</div>
+                            </div>
+                            <div class="play-now">
+                            <span>Plan Now</span>
+                            <img class="invert" id="library-play-btn" src="play.svg" alt=""></div>
+                        </li> -->
+                    </ul>
+                </div>
+
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/in-en/legal/">Legal</a></div>
+                    <div><a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety Privacy Center</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a></div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a></div>
+                </div>
+                <div class="lang-btn flex">
+                    <svg class="invert" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
+                        class="Svg-sc-ytk21e-0 dYnaPI">
+                        <path
+                            d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h3.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h3.031z">
+                        </path>
+                    </svg>
+                    English
+                </div>
+            </div>
+
+        </div>
+        <div class="right_container rounded p-1">
+            <div class="header ">
+                <div class="nav">
+                    <img class="invert hamburger" src="hamburger.svg" alt="">
+                    <div class="left-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                            <g id="_01_align_center" data-name="01 align center">
+                                <path
+                                    d="M16.752,23.994,6.879,14.121a3,3,0,0,1,0-4.242L16.746.012,18.16,1.426,8.293,11.293a1,1,0,0,0,0,1.414l9.873,9.873Z" />
+                            </g>
+                        </svg>
+                    </div>
+
+                   <div class="right-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                        <g id="_01_align_center" data-name="01 align center">
+                            <path
+                                d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                        </g>
+                    </svg>
+                   </div>
+                </div>
+                    <div class="buttons">
+
+                    <button class="signup-btn">Sign up</button>
+                    <button class="login-btn">Log in</button>
+                </div>
+            </div>
+            <div class="spotifyPlaylist">
+            <h1>Spotify Playlists</h1></div>
+            <div class="cardContainer">
+
+                <!-- Card Starting -->
+                <div class="card">
+                    <div class="play">
+                      <div class="circle-green">
+                        <img src="play-svgrepo-com.svg" alt="">
+                      </div>     
+                    </div>
+                    <img src="playlist.png" alt="">
+                    <h2>Dinner with Friends</h2>
+                    <p>The perfect soundtrack to those long nights over dinner</p>
+                </div> 
+                <div class="card">
+                    <div class="play">
+                      <div class="circle-green">
+                        <img src="play-svgrepo-com.svg" alt="">
+                      </div>     
+                    </div>
+                    <img src="playlist.png" alt="">
+                    <h2>Dinner with Friends</h2>
+                    <p>The perfect soundtrack to those long nights over dinner</p>
+                </div>   
+                <div class="card">
+                    <div class="play">
+                      <div class="circle-green">
+                        <img src="play-svgrepo-com.svg" alt="">
+                      </div>     
+                    </div>
+                    <img src="playlist.png" alt="">
+                    <h2>Dinner with Friends</h2>
+                    <p>The perfect soundtrack to those long nights over dinner</p>
+                </div>               
+            </div>
+            
+            
+<!-- Card Close -->
+            <div class="playbar">
+                <div class="current-song-container">
+                <div class="song-info-txt"></div>
+                <div class="playbar-tools">
+                <div class="playbar-right-side">
+                <div class="song-time"></div>
+                <div class="sound">
+                    <img id="sound-img" src="volume.svg" alt="">
+                    <input type="range" name="volume" id="volume-bar">
+                </div>   
+                </div>
+                </div>
+            </div>
+                <div class="seekbar">
+                    <div class="seekbar-circle"></div>
+                </div>
+                <div class="song-buttons">
+                    <img id="prev" src="prev.svg" alt="">
+                    <img id="play" src="play.svg" alt="">
+                    <img id="next" src="next.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+<script src="scripts.js"></script>
+</body>
+
+</html>
