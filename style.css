@@ -15,17 +15,30 @@ body {
 }
 
 .left_container {
-  width: 25vw;
+  width: 30vw;
   padding: 3px;
   /* background-color: black; */
 }
 .right_container {
-  width: 75vw;
+  width: 70vw;
   margin: 8px 0px;
   background-color: #101010;
   padding: 0px 20px;
   position: relative;
   /* max-height: 95vh; */
+}
+.logo img {
+  width: 100px;
+}
+.logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.logo span {
+  font-size: 35px;
+  font-family: "Gorditas", serif;
 }
 .home ul li {
   width: 14px;
@@ -44,7 +57,7 @@ body {
   gap: 15px;
   padding-top: 14px;
   font-weight: bold;
-  padding: 23px 14px;
+  padding: 23px 0px;
   align-items: center;
   font-size: 13px;
 }
@@ -94,9 +107,7 @@ body {
   width: 20px;
 }
 .header {
-  justify-content: space-between;
-  display: flex;
-  margin-top: -20px;
+  margin-top: 5px;
 }
 .header > * {
   padding: 20px;
@@ -113,13 +124,17 @@ body {
   background-color: #0d0d0d;
   border-radius: 50px;
 }
-#sound-img{
+#sound-img {
   width: 22px;
 }
 .nav {
   display: flex;
   gap: 8px;
+  border-radius: 5px;
+  justify-content: flex-end;
+  background-color: #222222;
 }
+
 .cardContainer .card {
   width: 220px;
   padding: 10px;
@@ -142,19 +157,30 @@ body {
 .spotifyPlaylist h1:hover {
   text-decoration: underline;
 }
-.playbar-tools{
+.playbar-tools {
   display: flex;
   gap: 10px;
 }
 .card:hover {
   background-color: #191919;
   border-radius: 10px;
-
 }
-.card:hover .circle-green{
+.card:hover .circle-green {
   top: 160px;
-  right: 18px; 
+  right: 18px;
   opacity: 1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotation {
+  animation: rotate 2s linear infinite;
 }
 
 .cardContainer {
@@ -163,7 +189,7 @@ body {
   max-height: 70vh;
   overflow-y: scroll;
 }
- .circle-green {
+.circle-green {
   width: 24px;
   background-color: #1ed760;
   display: flex;
@@ -173,27 +199,39 @@ body {
   align-items: center;
   position: absolute;
   top: 240px;
-  right: 18px; 
+  right: 18px;
   opacity: 0;
   transition: all ease-in-out;
-
-
 }
-.sound{
+.sound {
   display: flex;
   gap: 9px;
 }
+.Download_cta {
+  color: black;
+}
 
-.buttons{
-    display: flex;
-    gap: 13px;
+.buttons {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  gap: 10px;
+  border-radius: 50px;
+}
+.Download_cta {
+  font-size: 20px;
+  font-weight: 700;
+}
+.playStore {
+  width: 30px;
 }
 button.login-btn {
-    font-weight: bold;
-    font-size: 18px;
-    background-color: white;
-    border-radius: 30px;
-    padding: 10px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
 }
 
 button.login-btn:hover {
@@ -236,12 +274,19 @@ button.signup-btn:hover {
   gap: 7px;
   font-size: 12px;
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
 }
 .song-list ul:hover {
   cursor: pointer;
+}
+.glowImg {
+  position: absolute;
+  bottom: 40px;
+  z-index: 0;
+  opacity: 0.5;
+  left: 345px;
 }
 
 .song-list ul {
@@ -256,25 +301,32 @@ button.signup-btn:hover {
 .play-now {
   display: flex;
   justify-content: center;
-  /* margin-left: px; */
   align-items: center;
   gap: 5px;
+  background-color: white;
+  padding: 6px 8px;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
 }
 .play-now span {
   width: 65px;
   font-size: 13px;
 }
-.song-name{
-display: none;
+.song-name {
+  display: none;
 }
-.song-name-play-text{
-text-transform: capitalize;
+.song-name-play-text {
+  text-transform: capitalize;
 }
 .song-info-txt {
-text-transform: capitalize;
+  text-transform: capitalize;
+}
+#volume-bar {
+  accent-color: #54ff00;
 }
 .song-list {
-  height: 345px;
+  height: 500px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -306,14 +358,19 @@ text-transform: capitalize;
   justify-content: space-between;
   padding-bottom: 10px;
 }
+.mahi_info {
+  display: none;
+}
 
 .hamburger {
   display: none;
+  width: 30px;
 }
 .left-arrow svg,
 .right-arrow svg {
   width: 15px;
 }
+
 .close {
   display: none;
 }
@@ -324,13 +381,36 @@ text-transform: capitalize;
   gap: 9px;
 }
 
+.song-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 @media screen and (max-width: 1400px) {
+  .mahi_info {
+    display: block;
+  }
+  .mahi_info img {
+    width: 50px;
+  }
+  .mahi_info span {
+    font-size: 18px;
+  }
+  .nav {
+    display: flex;
+    gap: 8px;
+    border-radius: 5px;
+    justify-content: space-between;
+    background-color: #222222;
+  }
   .left_container {
     position: absolute;
     left: -100%;
     transition: all ease 0.1s;
     z-index: 1;
-    width: 60vw;
+    width: 100vw;
     background-color: #121212;
   }
   .right_container {
@@ -347,16 +427,15 @@ text-transform: capitalize;
   }
   .hamburger {
     display: block;
-    width: 22px;
     border: 2px solid black;
     border-radius: 100px;
-    padding: 11px;
+    padding: 6px;
   }
+
   .song-list ul li {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     font-size: 12px;
     border: 1px solid white;
     border-radius: 10px;
@@ -392,41 +471,66 @@ text-transform: capitalize;
   }
 }
 
-@media screen and (max-width:430px) {
-    .playbar {
-        width: 80vw;
-        font-size: 13px;
-    }
-    .header > * {
-        padding: 10px 2px;
+@media screen and (max-width: 430px) {
+  .playbar {
+    width: 90vw;
+    font-size: 13px;
+  }
+  .header > * {
+    padding: 10px 2px;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .hamburger {
+    display: block;
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 6px;
+  }
 
-
-    }}
-
-
-@media screen and (max-width:377px) {
-    button.signup-btn{
-        background: none;
-        color: #a7a7a7;
-        font-weight: 700;
-        font-size: 15px;
-        padding: 2px;
-        border: 0px;
-    }
-    button.login-btn {
-        font-weight: bold;
-        font-size: 15px;
-        background-color: white;
-        border-radius: 30px;
-        padding: 2px 13px;
-    }
-}
-
-@media screen and (max-width: 881px){
-  .song-info-txt{
-    max-width: 450px;
+  .current-song-container {
+    color: black;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    padding-bottom: 10px;
   }
 }
-@media screen and (max-width: 450px){
 
+@media screen and (max-width: 377px) {
+  button.signup-btn {
+    background: none;
+    color: #a7a7a7;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 2px;
+    border: 0px;
+  }
+  button.login-btn {
+    font-weight: bold;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 2px 13px;
+  }
+}
+
+@media screen and (max-width: 881px) {
+  .song-info-txt {
+    max-width: 450px;
+  }
+  .buttons {
+    scale: 0.8;
+  }
+}
+@media screen and (max-width: 450px) {
+  .Download_cta {
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+  }
 }

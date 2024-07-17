@@ -5,7 +5,7 @@ let currentSong = new Audio()
 let songs;
 async function getSongs() {
 
-    let song_list = await fetch("/songs/")
+    let song_list = await fetch("http://127.0.0.1:3000/songs/")
     let response = await song_list.text()
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -69,15 +69,13 @@ async function main() {
     let songUl = document.querySelector(".song-list").getElementsByTagName("ul")[0]
     for (const song of songs) {
         songUl.innerHTML = songUl.innerHTML + `<li> 
-        <img class="invert" src="music_note.svg" alt="">
         <div class="song-info">
             <div class="song-name">${decodeURI(song)}</div>
             <div class="song-name-play-text">${decodeURI(song).replaceAll("-", " ")}</div>
-            <div class="Song-Artist">Aditya</div>
         </div>
         <div class="play-now">
         <span>Plan Now</span>
-        <img class="invert" id="library-play-btn" src="play.svg" alt=""></div>
+        <img class="" id="library-play-btn" src="play.svg" alt=""></div>
     </li>`
         // console.log(songUl);
 
@@ -93,12 +91,15 @@ async function main() {
     })
     // Attaching event listner to play, next and previous
     play.addEventListener("click", () => {
+        var logo=document.getElementById("mahiImage")
         if (currentSong.paused) {
+            logo.classList.add("rotation")
             currentSong.play()
             play.src = "pause.svg"
         }
         else {
             currentSong.pause()
+            logo.classList.remove("rotation")
             play.src = "play.svg"
         }
     })
@@ -159,6 +160,8 @@ async function main() {
         console.log((e.target.value) / 100)
         currentSong.volume = (e.target.value) / 100
     })
+
+   
 
     // Adding event listenr for muting
     document.querySelector(".sound").addEventListener("click", () => {
