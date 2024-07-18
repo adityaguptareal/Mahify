@@ -7,10 +7,14 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap');
     </style>
-    <title>Spotify - Web Player: Music for everyone'</title>
+    <title>MahiFy - Mahi Presonal Music Library</title>
 </head>
 
 <body>
@@ -31,7 +35,7 @@
             <div class="library bg-grey rounded m-1  p-1">
                 <div class="heading">
                     <img class="invert" src="playlist.svg" alt="">
-                    <h2>Mahi's Special</h2>
+                    <h2>Mahi's Playlist</h2>
                 </div>
 
                 <!-- Library Songs List -->
@@ -71,40 +75,31 @@
 
                 </div>
                 <div class="spotifyPlaylist">
-                    <h1>Mahi's Special</h1>
+                    <h1>Mahi's Playlist</h1>
                 </div>
                 <div class="cardContainer">
                     <!-- Card Starting -->
-                    <div class="card">
+                    <div data-folder="mahi" class="card">
                         <div class="play">
                             <div class="circle-green">
                                 <img src="play-svgrepo-com.svg" alt="">
                             </div>
                         </div>
-                        <img src="playlist.png" alt="">
-                        <h2>Dinner with Friends</h2>
-                        <p>The perfect soundtrack to those long nights over dinner</p>
+                        <img src="songs/mahi/Cover.png" alt="">
+                        <h2>Mahi Special</h2>
+                        <p>Playlist Contains songs which is dedicated to Mahi</p>
                     </div>
-                    <div class="card" id="this-one">
+                    <div data-folder="mahiFavorite" class="card" id="this-one">
                         <div class="play">
                             <div class="circle-green">
                                 <img src="play-svgrepo-com.svg" alt="">
                             </div>
                         </div>
-                        <img src="playlist.png" alt="">
-                        <h2>Dinner with Friends</h2>
-                        <p>The perfect soundtrack to those long nights over dinner</p>
+                        <img src="songs/mahiFavorite/cover.png" alt="">
+                        <h2>Mahi Favorite</h2>
+                        <p>Playlist Contain songs which is Mahi Favorite</p>
                     </div>
-                    <div class="card">
-                        <div class="play">
-                            <div class="circle-green">
-                                <img src="play-svgrepo-com.svg" alt="">
-                            </div>
-                        </div>
-                        <img src="playlist.png" alt="">
-                        <h2>Dinner with Friends</h2>
-                        <p>The perfect soundtrack to those long nights over dinner</p>
-                    </div>
+
                 </div>
 
 
